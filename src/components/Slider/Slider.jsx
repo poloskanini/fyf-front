@@ -1,7 +1,7 @@
 import "./Slider.scss";
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 
 export const Slider = () => {

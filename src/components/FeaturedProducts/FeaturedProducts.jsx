@@ -22,7 +22,7 @@ const {data,loading,error} = useFetch(`/products?populate=*&[filters][type][$eq]
       </div>
       <div className="bottom">
         {error
-        ? "Something went wrong on fetching products..."
+        ? "Something went wrong while fetching products..."
         : loading
         ? "loading"
         : data?.map(item => (

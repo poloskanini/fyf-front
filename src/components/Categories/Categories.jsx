@@ -11,7 +11,7 @@ export const Categories = () => {
           alt=""
         />
         <button>
-          <Link className="link" to="/products/1">
+          <Link className="link" to="/products/">
             Sale
           </Link>
         </button>
@@ -51,7 +51,7 @@ export const Categories = () => {
               alt=""
             />
             <button>
-              <Link to="/products/1" className="link">
+              <Link to="/products/2" className="link">
                 Men
               </Link>
             </button>

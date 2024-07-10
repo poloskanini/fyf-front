@@ -8,7 +8,7 @@ export const Products = () => {
 
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState();
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   const {data,loading,error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
@@ -50,7 +50,7 @@ export const Products = () => {
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
-            <input type="radio" id="asc" value="asc" name="price" onChange={e => setSort("asc")}/>
+            <input type="radio" id="asc" value="asc" name="price" onChange={e => setSort("asc")} checked/>
             <label htmlFor="asc">Price (Lowest first)</label>
           </div> 
           <div className="inputItem">
@@ -62,7 +62,9 @@ export const Products = () => {
 
       <div className="right">
         <img className="catImg" src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="man-seated" />
+
         <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
+        
       </div>
     </div>
   )

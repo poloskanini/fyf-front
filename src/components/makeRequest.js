@@ -1,3 +1,5 @@
+// FETCH 1/2 : Create the request
+
 import axios from "axios";
 
 export const makeRequest = axios.create({

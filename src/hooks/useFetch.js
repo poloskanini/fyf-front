@@ -1,3 +1,5 @@
+// FETCH 2/2 : Fetching
+
 import { useState, useEffect } from "react";
 import { makeRequest } from "../components/makeRequest";
 
